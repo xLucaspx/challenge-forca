@@ -17,4 +17,7 @@ function sorteiaPalavra() {
 const botaoIniciar = document.querySelector(".botao-iniciar");
 
 
-botaoIniciar.onclick = iniciaJogo;
+botaoIniciar.onclick = function () {
+    iniciaJogo();
+    desenhaForca();
+}
