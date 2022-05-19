@@ -1,0 +1,7 @@
+.invisivel {
+    display: none;
+}
+canvas {
+    border: 1px solid black;
+    background-color: azure;
+}
