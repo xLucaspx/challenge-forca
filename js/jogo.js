@@ -19,5 +19,7 @@ const botaoIniciar = document.querySelector(".botao-iniciar");
 
 botaoIniciar.onclick = function () {
     iniciaJogo();
-    desenhaForca();
+    desenhaForca("#654321");
 }
+
+desenhaCabeca();
