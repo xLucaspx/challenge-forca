@@ -16,10 +16,17 @@ function sorteiaPalavra() {
 
 const botaoIniciar = document.querySelector(".botao-iniciar");
 
+var corForca = "#654321";
+var corBoneco = "#0a3871";
 
 botaoIniciar.onclick = function () {
     iniciaJogo();
-    desenhaForca("#654321");
+    desenhaForca(corForca);
 }
 
-desenhaCabeca();
+desenhaCabeca(corBoneco);
+desenhaCorpo(corBoneco);
+desenhaBracoEsq(corBoneco);
+desenhaBracoDir(corBoneco);
+desenhaPernaEsq(corBoneco);
+desenhaPernaDir(corBoneco);
