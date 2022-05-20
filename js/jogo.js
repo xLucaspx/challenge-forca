@@ -24,9 +24,16 @@ botaoIniciar.onclick = function () {
     desenhaForca(corForca);
 }
 
+desenhaForca(corForca);
 desenhaCabeca(corBoneco);
 desenhaCorpo(corBoneco);
 desenhaBracoEsq(corBoneco);
 desenhaBracoDir(corBoneco);
 desenhaPernaEsq(corBoneco);
 desenhaPernaDir(corBoneco);
+
+var palavra = sorteiaPalavra();
+var caracteres = palavra.split("");
+console.log(palavra);
+
+desenhaTracos(caracteres);

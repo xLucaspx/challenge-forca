@@ -58,5 +58,16 @@ function desenhaPernaDir(cor) {
     pincel.stroke();
 }
 
+function desenhaTracos(caracteres) {
+    var x = 325;
+
+    for(var i = 0; i < caracteres.length; i++) {
+
+        pincel.fillStyle = "black";
+        pincel.fillRect(x, 520, 70, 4);
+        x = x + 90;
+    }
+}
+   
 var canvas = document.querySelector("#tabuleiro");
 var pincel = canvas.getContext("2d");
