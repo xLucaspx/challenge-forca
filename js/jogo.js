@@ -22,8 +22,14 @@ var corBoneco = "#0a3871";
 botaoIniciar.onclick = function () {
     iniciaJogo();
     desenhaForca(corForca);
-}
 
+    var palavra = sorteiaPalavra();
+    var caracteres = palavra.split("");
+    console.log(palavra);
+
+    desenhaTracos(caracteres);
+}
+/*
 desenhaForca(corForca);
 desenhaCabeca(corBoneco);
 desenhaCorpo(corBoneco);
@@ -36,4 +42,4 @@ var palavra = sorteiaPalavra();
 var caracteres = palavra.split("");
 console.log(palavra);
 
-desenhaTracos(caracteres);
+desenhaTracos(caracteres);*/
