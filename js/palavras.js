@@ -4,4 +4,4 @@ var palavras = ["ZERO", "AMARELO", "CANECA", "ELEFANTE", "ESCOLA",
 "CONTEXTO", "BANHEIRO", "EMPENHO", "DINHEIRO", "SERENATA", "PEDESTRE", 
 "ADVOGADO", "CACTO", "GNOMO", "RITMO", "JOGO", "QUADRO", "FORCA"];
 
-console.log("Núemro de palavras disponíveis: " + palavras.length);
+console.log("Número de palavras disponíveis: " + palavras.length);
