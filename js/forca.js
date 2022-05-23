@@ -25,7 +25,7 @@ function desenhaCorpo(cor) {
 function desenhaBracoEsq(cor) {
     pincel.strokeStyle = cor;
     pincel.beginPath();
-    pincel.moveTo(710, 194);
+    pincel.moveTo(711, 198);
     pincel.lineTo(678, 264);
     pincel.lineWidth = 4;
     pincel.stroke();
@@ -34,7 +34,7 @@ function desenhaBracoEsq(cor) {
 function desenhaBracoDir(cor) {
     pincel.strokeStyle = cor;
     pincel.beginPath();
-    pincel.moveTo(714, 194);
+    pincel.moveTo(713, 198);
     pincel.lineTo(746, 264);
     pincel.lineWidth = 4;
     pincel.stroke();
@@ -56,6 +56,19 @@ function desenhaPernaDir(cor) {
     pincel.lineTo(750, 403);
     pincel.lineWidth = 4;
     pincel.stroke();
+}
+
+function desenhaBoneco(cor) {
+    desenhaCabeca(cor);
+    desenhaCorpo(cor);
+    desenhaBracoEsq(cor);
+    desenhaBracoDir(cor);
+    desenhaPernaEsq(cor);
+    desenhaPernaDir(cor);
+}
+
+function limpaTela() {
+    pincel.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 var canvas = document.querySelector("#tabuleiro");

@@ -1,25 +1,28 @@
 function iniciaJogo() {
-    const sectionBotoes = document.querySelector(".botoes");
-    const sectionTabuleiro = document.querySelector(".tabuleiro");
+    let sectionBotoes = document.querySelector(".botoes");
+    let sectionTabuleiro = document.querySelector(".tabuleiro");
 
     sectionBotoes.classList.add("invisivel");
     sectionTabuleiro.classList.remove("invisivel");
 }
 
 function sorteiaPalavra() {
-    var maximo = palavras.length;
+    let maximo = palavras.length;
     
-    var i = Math.floor(Math.random() * maximo);
+    let i = Math.floor(Math.random() * maximo);
 
     return palavras[i];
 }
 
-const botaoIniciar = document.querySelector(".botao-iniciar");
+const botaoIniciar = document.querySelector(".btn-iniciar");
+const botaoNovoJogo = document.querySelector(".btn-novo-jogo");
+const botaoDesistir = document.querySelector(".btn-desistir");
 
-var corForca = "#654321";
-var corBoneco = "#0a3871";
+let corForca = "#654321";
+let corBoneco = "#0a3871";
 
-botaoIniciar.onclick = function () {
+botaoIniciar.onclick = function() {
+    limpaTela();
     iniciaJogo();
     desenhaForca(corForca);
 
@@ -29,17 +32,20 @@ botaoIniciar.onclick = function () {
 
     desenhaTracos(caracteres);
 }
-/*
-desenhaForca(corForca);
-desenhaCabeca(corBoneco);
-desenhaCorpo(corBoneco);
-desenhaBracoEsq(corBoneco);
-desenhaBracoDir(corBoneco);
-desenhaPernaEsq(corBoneco);
-desenhaPernaDir(corBoneco);
 
-var palavra = sorteiaPalavra();
-var caracteres = palavra.split("");
-console.log(palavra);
+botaoNovoJogo.onclick = function() {
+    limpaTela();
+    desenhaForca(corForca);
+    var palavra = sorteiaPalavra();
+    var caracteres = palavra.split("");
+    console.log(palavra);
+    desenhaTracos(caracteres);
+}
 
-desenhaTracos(caracteres);*/
+botaoDesistir.onclick = function() {
+    let sectionBotoes = document.querySelector(".botoes");
+    let sectionTabuleiro = document.querySelector(".tabuleiro");
+
+    sectionBotoes.classList.remove("invisivel");
+    sectionTabuleiro.classList.add("invisivel");
+}

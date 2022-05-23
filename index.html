@@ -27,12 +27,20 @@
 
     <main>
         <section class="botoes">
-            <button class="botao-iniciar">Iniciar jogo</button>
-            <button class="botao-adicionar">Adicionar nova palavra</button>
+            <button class="btn-iniciar">Iniciar jogo</button>
+            <button class="btn-adicionar">Adicionar nova palavra</button>
         </section>
         
         <section class="tabuleiro invisivel">
             <canvas id="tabuleiro" width="1200" height="800"></canvas>
+            <button class="btn-novo-jogo">Novo jogo</button>
+            <button class="btn-desistir">Desistir</button>
+        </section>
+
+        <section class="adicionar-palavra invisivel">
+            <input type="text" class="add-palavra">
+            <button class="btn-salvar">Salvar</button>
+            <button class="btn-voltar">Voltar</button>
         </section>
     </main>
     <footer>
