@@ -8,3 +8,9 @@ canvas {
     border: 1px solid black;
     background-color: azure;
 }
+.mensagens-erro li::before {
+    content: url(../img/exclamation.png);
+    width: 16px;
+    height: 17px;
+    vertical-align: middle;
+}

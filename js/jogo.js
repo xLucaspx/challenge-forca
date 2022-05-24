@@ -1,17 +1,24 @@
-function iniciaJogo() {
-    let sectionBotoes = document.querySelector(".botoes");
+function mostraTabuleiro() {
+    let sectionBotoes = document.querySelector(".botoes-iniciar");
     let sectionTabuleiro = document.querySelector(".tabuleiro");
 
     sectionBotoes.classList.add("invisivel");
     sectionTabuleiro.classList.remove("invisivel");
 }
 
-function sorteiaPalavra() {
-    let maximo = palavras.length;
+function sorteia(array) {
+    let maximo = array.length;
     
     let i = Math.floor(Math.random() * maximo);
 
-    return palavras[i];
+    return array[i];
+}
+
+function iniciaJogo() {
+    let palavra = sorteia(palavras);
+    let caracteres = palavra.split("");
+    desenhaTracos(caracteres);
+    console.log(palavra); //remover depois
 }
 
 const botaoIniciar = document.querySelector(".btn-iniciar");
@@ -23,27 +30,19 @@ let corBoneco = "#0a3871";
 
 botaoIniciar.onclick = function() {
     limpaTela();
-    iniciaJogo();
+    mostraTabuleiro();
     desenhaForca(corForca);
-
-    var palavra = sorteiaPalavra();
-    var caracteres = palavra.split("");
-    console.log(palavra);
-
-    desenhaTracos(caracteres);
+    iniciaJogo();
 }
 
 botaoNovoJogo.onclick = function() {
     limpaTela();
     desenhaForca(corForca);
-    var palavra = sorteiaPalavra();
-    var caracteres = palavra.split("");
-    console.log(palavra);
-    desenhaTracos(caracteres);
+    iniciaJogo();
 }
 
 botaoDesistir.onclick = function() {
-    let sectionBotoes = document.querySelector(".botoes");
+    let sectionBotoes = document.querySelector(".botoes-iniciar");
     let sectionTabuleiro = document.querySelector(".tabuleiro");
 
     sectionBotoes.classList.remove("invisivel");

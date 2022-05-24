@@ -26,7 +26,7 @@
     </header>
 
     <main>
-        <section class="botoes">
+        <section class="botoes-iniciar">
             <button class="btn-iniciar">Iniciar jogo</button>
             <button class="btn-adicionar">Adicionar nova palavra</button>
         </section>
@@ -39,8 +39,15 @@
 
         <section class="adicionar-palavra invisivel">
             <input type="text" class="add-palavra">
-            <button class="btn-salvar">Salvar</button>
-            <button class="btn-voltar">Voltar</button>
+
+            <div class="botoes-adicionar">
+                <button class="btn-salvar">Salvar</button>
+                <button class="btn-voltar">Voltar</button>
+            </div>
+
+            <div class="info">
+                <ul class="mensagens-erro"></ul>
+            </div>
         </section>
     </main>
     <footer>
@@ -68,7 +75,7 @@
             <p>&#169; Desenvolvido por Lucas da Paz - 2022</p>
         </div>
     </footer>
-
+    <script src="js/valida.js"></script>
     <script src="js/palavras.js"></script>
     <script src="js/forca.js"></script>
     <script src="js/tracos.js"></script>
