@@ -1,5 +1,12 @@
 function validaPalavra(palavra) {
     let erros = [];
+    let invalido = ["*", "/", "-", "+", "§", "=", "_", ")", "(", "&", "¨", "¬", "¢", "%", "£", "$", "³", "#", "°", 
+    "²", "@", "¹", "!", "|", "₢", "<", ">", ",", ".", ";", ":", "~", "^", "`", "[", "{", "ª", "º", "}", "]", "?", 
+    "\"", "\'", "\´", "\\", " "];
+    
+    for(let i = 0; i < invalido.length; i++) {
+        if(palavra.includes(invalido[i])) erros.push(" Caracteres inválidos detectados!");
+    }
 
     if(palavra.length == 0) erros.push(" Digite algum texto!");
 
