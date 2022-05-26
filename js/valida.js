@@ -29,3 +29,10 @@ function mostraErros(erros) {
         ul.appendChild(li);
     });
 }
+
+/*function validaLetra(letra) {
+    let erros = [];
+    if(/[A-Z]/.test(letra)) erros.push(" Nenhum erro amigo");
+
+    return erros;
+}*/
