@@ -6,28 +6,29 @@ var palavras = ["ZERO", "AMARELO", "CANECA", "ELEFANTE", "ESCOLA",
 "CONTEXTO", "BANHEIRO", "EMPENHO", "DINHEIRO", "SERENATA", "PEDESTRE", 
 "ADVOGADO", "CACTO", "GNOMO", "RITMO", "JOGO", "QUADRO", "FORCA"];
 
-//Botões
+//Botões, input, section
 
 const btnAdicionar = document.querySelector(".btn-adicionar")
 const btnSalvar = document.querySelector(".btn-salvar");
 const btnVoltar = document.querySelector(".btn-voltar");
+const sectionAdicionar = document.querySelector(".adicionar-palavra");
+let inputAddPalavra = document.querySelector(".add-palavra");
+
 
 //Função para mostrar campo de adicionar palavra
 
 btnAdicionar.addEventListener("click", function() {
-    let sectionBotoes = document.querySelector(".botoes-iniciar");
-    let sectionAdicionar = document.querySelector(".adicionar-palavra");
-
     sectionBotoes.classList.add("invisivel");
     sectionAdicionar.classList.remove("invisivel");
+    inputAddPalavra.value = "";
+    inputAddPalavra.focus();
 });
 
 //Função para salvar nova palavra
 
 btnSalvar.addEventListener("click", function(){
-    let inputAddPalavra = document.querySelector(".add-palavra");
     let novaPalavra = inputAddPalavra.value.toUpperCase();
-    
+
     let erros = validaPalavra(novaPalavra);
     let mensagensErro = document.querySelector(".mensagens-erro");
 
@@ -46,12 +47,7 @@ btnSalvar.addEventListener("click", function(){
 //Função para retornar ao menu inicial
 
 btnVoltar.addEventListener("click", function() {
-    let inputAddPalavra = document.querySelector(".add-palavra");
     inputAddPalavra.value = "";
-
-    let sectionBotoes = document.querySelector(".botoes-iniciar");
-    let sectionAdicionar = document.querySelector(".adicionar-palavra");
-
     sectionAdicionar.classList.add("invisivel");
     sectionBotoes.classList.remove("invisivel");
 });
