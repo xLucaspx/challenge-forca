@@ -1,13 +1,13 @@
-function desenhaForca(cor) {
-    pincel.fillStyle = cor;
+function desenhaForca() {
+    pincel.fillStyle = "#654321";
     pincel.fillRect(450, 435, 295, 5); //parte de baixo
     pincel.fillRect(530, 80, 5, 360); //"mastro"
     pincel.fillRect(530, 80, 180, 5); //parte de cima
     pincel.fillRect(710, 80, 5, 50); //"corda"
 }
 
-function desenhaCabeca(cor) {
-    pincel.fillStyle = cor;
+function desenhaCabeca() {
+    pincel.fillStyle = "#0a3871";
     pincel.beginPath();
     pincel.arc(712.5, 162, 32.5, 0, 2 * 3.14);
     pincel.fill();
@@ -17,13 +17,13 @@ function desenhaCabeca(cor) {
     pincel.fill();
 }
 
-function desenhaCorpo(cor) {
-    pincel.fillStyle = cor;
+function desenhaCorpo() {
+    pincel.fillStyle = "#0a3871";
     pincel.fillRect(710, 194, 4, 130);
 }
 
-function desenhaBracoEsq(cor) {
-    pincel.strokeStyle = cor;
+function desenhaBracoEsq() {
+    pincel.strokeStyle = "#0a3871";
     pincel.beginPath();
     pincel.moveTo(711, 198);
     pincel.lineTo(678, 264);
@@ -31,8 +31,8 @@ function desenhaBracoEsq(cor) {
     pincel.stroke();
 }
 
-function desenhaBracoDir(cor) {
-    pincel.strokeStyle = cor;
+function desenhaBracoDir() {
+    pincel.strokeStyle = "#0a3871";
     pincel.beginPath();
     pincel.moveTo(713, 198);
     pincel.lineTo(746, 264);
@@ -40,8 +40,8 @@ function desenhaBracoDir(cor) {
     pincel.stroke();
 }
 
-function desenhaPernaEsq(cor) {
-    pincel.strokeStyle = cor;
+function desenhaPernaEsq() {
+    pincel.strokeStyle = "#0a3871";
     pincel.beginPath();
     pincel.moveTo(711, 323);
     pincel.lineTo(674, 403);
@@ -49,8 +49,8 @@ function desenhaPernaEsq(cor) {
     pincel.stroke();
 }
 
-function desenhaPernaDir(cor) {
-    pincel.strokeStyle = cor;
+function desenhaPernaDir() {
+    pincel.strokeStyle = "#0a3871";
     pincel.beginPath();
     pincel.moveTo(713, 323);
     pincel.lineTo(750, 403);
@@ -58,13 +58,13 @@ function desenhaPernaDir(cor) {
     pincel.stroke();
 }
 
-function desenhaBoneco(cor) {
-    desenhaCabeca(cor);
-    desenhaCorpo(cor);
-    desenhaBracoEsq(cor);
-    desenhaBracoDir(cor);
-    desenhaPernaEsq(cor);
-    desenhaPernaDir(cor);
+function desenhaBoneco() {
+    desenhaCabeca();
+    desenhaCorpo();
+    desenhaBracoEsq();
+    desenhaBracoDir();
+    desenhaPernaEsq();
+    desenhaPernaDir();
 }
 
 function limpaTela() {
