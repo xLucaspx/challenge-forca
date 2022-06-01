@@ -71,5 +71,21 @@ function limpaTela() {
     pincel.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+function desenhaPerdeu() {
+    pincel.font = "65px Arial";
+    pincel.strokeStyle = "black";
+    pincel.lineWidth = 1;
+    pincel.strokeText("FIM DE JOGO", 380, 325);
+    pincel.strokeText("VOCÊ PERDEU!", 350, 415);
+}
+
+function desenhaGanhou() {
+    pincel.font = "65px Arial";
+    pincel.strokeStyle = "black";
+    pincel.lineWidth = 1;
+    pincel.strokeText("PARABÉNS", 430, 325);
+    pincel.strokeText("VOCÊ GANHOU!", 350, 415);
+}
+
 var canvas = document.querySelector("#tabuleiro");
 var pincel = canvas.getContext("2d");

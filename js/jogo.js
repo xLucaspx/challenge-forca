@@ -82,13 +82,22 @@ function jogar(caracteres) {
             }
             
             let erros = usadas.length;
-            console.log(erros); //remover depois
+            
             if(erros == 1) desenhaCabeca();
             if(erros == 2) desenhaCorpo();
             if(erros == 3) desenhaBracoEsq();
             if(erros == 4) desenhaBracoDir();
             if(erros == 5) desenhaPernaEsq();
-            if(erros == 6) desenhaPernaDir();
+            if(erros == 6) {
+                desenhaPernaDir();
+                setTimeout(limpaTela, 500);
+                setTimeout(desenhaPerdeu, 550);
+                setTimeout(function() {
+                    pincel.font = "65px Arial";
+                    pincel.fillStyle = "black";
+                    pincel.fillText("A PALAVRA ERA: " + caracteres.join(""), 215, 500);
+                }, 550);
+            }
 
             if(caracteres.length == 3) {
                 if(letra == caracteres[0]) {
@@ -96,18 +105,21 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 485, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 575, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 665, 525);
+                    acertos.push(letra);
                 }
             } if(caracteres.length == 4) {
                 if(letra == caracteres[0]) {
@@ -115,24 +127,28 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 440, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 530, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 620, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[3]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 710, 525);
+                    acertos.push(letra);
                 }
             } if(caracteres.length == 5) {
                 if(letra == caracteres[0]) {
@@ -140,30 +156,35 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 395, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 485, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 575, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[3]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 665, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[4]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 755, 525);
+                    acertos.push(letra);
                 }
             } if(caracteres.length == 6) {
                 if(letra == caracteres[0]) {
@@ -171,36 +192,42 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 350, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 440, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 530, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[3]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 620, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[4]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 710, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[5]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 800, 525);
+                    acertos.push(letra);
                 }
             } if(caracteres.length == 7) {
                 if(letra == caracteres[0]) {
@@ -208,42 +235,49 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 305, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 395, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 485, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[3]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 575, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[4]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 665, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[5]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 755, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[6]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 845, 525);
+                    acertos.push(letra);
                 }
             } if(caracteres.length == 8) {
                 if(letra == caracteres[0]) {
@@ -251,49 +285,61 @@ function jogar(caracteres) {
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 260, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[1]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 350, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[2]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 440, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[3]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 530, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[4]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 620, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[5]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 710, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[6]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 800, 525);
+                    acertos.push(letra);
                 }
                 if(letra == caracteres[7]) {
                     pincel.font = "55px Arial";
                     pincel.strokeStyle = "black";
                     pincel.lineWidth = 1;
                     pincel.strokeText(letra, 890, 525);
+                    acertos.push(letra);
                 }
+            } console.log(acertos);
+            if(acertos.length == caracteres.length) {
+                setTimeout(limpaTela, 500);
+                setTimeout(desenhaGanhou, 550);
             }
         }
     }
@@ -307,9 +353,11 @@ const sectionBotoes = document.querySelector(".botoes-iniciar");
 const sectionTabuleiro = document.querySelector(".tabuleiro");
 
 let usadas = [];
+let acertos = [];
 
 botaoIniciar.onclick = function() {
     usadas = [];
+    acertos = [];
     limpaTela();
     mostraTabuleiro();
     entrada.value = "";
@@ -319,12 +367,12 @@ botaoIniciar.onclick = function() {
     let caracteres = palavra.split("");
 
     desenhaTracos(caracteres);
-    console.log(palavra);
     jogar(caracteres);
 }
 
 botaoNovoJogo.onclick = function() {
     usadas = [];
+    acertos = [];
     limpaTela();
     entrada.value = "";
     desenhaForca();
@@ -333,7 +381,6 @@ botaoNovoJogo.onclick = function() {
     let caracteres = palavra.split("");
 
     desenhaTracos(caracteres);
-    console.log(palavra);
     jogar(caracteres);
 }
 
