@@ -40,6 +40,11 @@ function jogar(caracteres) {
                     return;
                 }
             }
+            for(let i = 0; i < acertos.length; i++) {
+                if(letra == acertos[i]) {
+                    return;
+                }
+            }
             if(caracteres.length == 3 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2]) {
                 usadas.push(letra);
                 pincel.font = "24px Arial";
