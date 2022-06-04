@@ -1,22 +1,153 @@
-* {
-    text-align: center;
+/*Fonte, background e "invisível"*/
+html {
+    font-family: 'PT Sans', sans-serif;
+}
+body {
+    background: linear-gradient(#f3f5fc, #eff1fa, #e9ecf8, #aab2d5, #757fb2);
 }
 .invisivel {
     display: none;
 }
+/*Header*/
+header {
+    display: flexbox;
+    margin: 2.5rem;
+}
+header a {
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0a3871;
+}
+header:hover {
+    transition: 0.5s;
+    opacity: 50%;
+}
+/*Configurações Botões*/
+.botoes-iniciar {
+    margin: 10rem auto;
+}
+.btn-iniciar, .btn-adicionar {
+    display: block;
+    width: 18rem;
+    height: 5rem;
+    margin: 1rem auto;
+    border-radius: 30px;
+    border-color: #0a3871;
+    border-width: 1px;
+    font-size: 22px;
+}
+.btn-iniciar, .btn-novo-jogo, .btn-salvar {
+    background-color: #0a3871;
+    color: #f3f5fc;
+}
+.btn-iniciar:hover, .btn-novo-jogo:hover, .btn-salvar:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+.btn-adicionar, .btn-desistir, .btn-voltar {
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+.btn-adicionar:hover, .btn-desistir:hover, .btn-voltar:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #0a3871;
+    color: #f3f5fc;
+}
+/*Tabuleiro*/
+.tabuleiro {
+    text-align: center;
+}
 canvas {
-    border: 1px solid black;
-    background-color: azure;
+    background-color: transparent;
+    border: none;
 }
 .entrada {
+    display: block;
     width: 0;
     height: 0;
     border: none;
     outline: none;
+}
+.btn-novo-jogo, .btn-desistir, .btn-salvar, .btn-voltar {
+    display: inline;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 30px;
+    border-color: #0a3871;
+    border-width: 1px;
+    font-size: 22px;
+}
+.btn-novo-jogo, .btn-salvar {
+    margin-right: 1.5rem;
+}
+.btn-desistir, .btn-voltar {
+    margin-left: 1.5rem;
+}
+/*Adicionar Palavra*/
+.adicionar-palavra {
+    text-align: center;
+}
+.add-palavra {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 30px;
+    width: 40rem;
+    height: 5rem;
+    font-size: 30px;
+}
+.info {
+    margin: 5rem 22rem;
 }
 .mensagens-erro li::before {
     content: url(../img/exclamation.png);
     width: 16px;
     height: 17px;
     vertical-align: middle;
+}
+.mensagens-erro li {
+    color: red;
+    font-size: 20px;
+    text-align: left;
+}
+.botoes-adicionar {
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+}
+/*Footer*/
+footer {
+    text-align: center;
+    margin-top: 5rem;
+}
+.redes {
+    display: inline;
+    font-size: 22px;
+    color: white;
+}
+.redes * {
+    vertical-align: middle;
+}
+.redes p {
+    margin-bottom: 1.5rem;
+}
+.redes a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+.redes a:hover {
+    transition: 0.5s;
+    opacity: 85%;
+    color: #0a3871;
+}
+.credito {
+    font-size: 18px;
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }

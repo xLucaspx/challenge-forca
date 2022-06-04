@@ -341,7 +341,7 @@ function jogar(caracteres) {
                     pincel.strokeText(letra, 890, 525);
                     acertos.push(letra);
                 }
-            } console.log(acertos);
+            }
             if(acertos.length == caracteres.length) {
                 setTimeout(limpaTela, 500);
                 setTimeout(desenhaGanhou, 550);

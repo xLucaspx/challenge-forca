@@ -1,10 +1,9 @@
 //Palavras
 
-var palavras = ["ZERO", "AMARELO", "CANECA", "ELEFANTE", "ESCOLA", 
-"LIMONADA", "UMBIGO", "PIJAMA", "AFILHADO", "AMENDOIM", "BASQUETE", 
-"FUTEBOL", "CAMINHO", "SISTEMA", "CHICLETE", "CHUVEIRO", "COELHO", 
-"CONTEXTO", "BANHEIRO", "EMPENHO", "DINHEIRO", "SERENATA", "PEDESTRE", 
-"ADVOGADO", "CACTO", "GNOMO", "RITMO", "JOGO", "QUADRO", "FORCA"];
+var palavras = ["ZERO", "AMARELO", "CANECA", "ELEFANTE", "ESCOLA", "LIMONADA", "UMBIGO", "PIJAMA", 
+"AFILHADO", "AMENDOIM", "BASQUETE", "FUTEBOL", "CAMINHO", "SISTEMA", "CHICLETE", "CHUVEIRO", "COELHO", 
+"CONTEXTO", "BANHEIRO", "EMPENHO", "DINHEIRO", "SERENATA", "PEDESTRE", "ADVOGADO", "CACTO", "GNOMO", 
+"RITMO", "JOGO", "QUADRO", "FORCA", "CEUTA", "NAU", "INFANTE", "BRASIL", "DAMASCO", "CARAVELA", "DOM"];
 
 //Botões, input, section
 
@@ -13,6 +12,7 @@ const btnSalvar = document.querySelector(".btn-salvar");
 const btnVoltar = document.querySelector(".btn-voltar");
 const sectionAdicionar = document.querySelector(".adicionar-palavra");
 let inputAddPalavra = document.querySelector(".add-palavra");
+let mensagensErro = document.querySelector(".mensagens-erro");
 
 
 //Função para mostrar campo de adicionar palavra
@@ -28,9 +28,7 @@ btnAdicionar.addEventListener("click", function() {
 
 btnSalvar.addEventListener("click", function(){
     let novaPalavra = inputAddPalavra.value.toUpperCase();
-
     let erros = validaPalavra(novaPalavra);
-    let mensagensErro = document.querySelector(".mensagens-erro");
 
     if(erros.length > 0) {
         mostraErros(erros);
@@ -48,6 +46,7 @@ btnSalvar.addEventListener("click", function(){
 
 btnVoltar.addEventListener("click", function() {
     inputAddPalavra.value = "";
+    mensagensErro.innerHTML = "";
     sectionAdicionar.classList.add("invisivel");
     sectionBotoes.classList.remove("invisivel");
 });

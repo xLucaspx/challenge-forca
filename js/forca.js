@@ -11,7 +11,7 @@ function desenhaCabeca() {
     pincel.beginPath();
     pincel.arc(712.5, 162, 32.5, 0, 2 * 3.14);
     pincel.fill();
-    pincel.fillStyle = "azure";
+    pincel.fillStyle = "#eff1fa";
     pincel.beginPath();
     pincel.arc(712.5, 162, 29, 0, 2* 3.14);
     pincel.fill();
@@ -75,16 +75,18 @@ function desenhaPerdeu() {
     pincel.font = "65px Arial";
     pincel.strokeStyle = "black";
     pincel.lineWidth = 1;
+    pincel.fillStyle = "red";
     pincel.strokeText("FIM DE JOGO", 380, 325);
-    pincel.strokeText("VOCÊ PERDEU!", 350, 415);
+    pincel.fillText("VOCÊ PERDEU!", 350, 415);
 }
 
 function desenhaGanhou() {
     pincel.font = "65px Arial";
     pincel.strokeStyle = "black";
     pincel.lineWidth = 1;
+    pincel.fillStyle = "darkGreen"
     pincel.strokeText("PARABÉNS", 430, 325);
-    pincel.strokeText("VOCÊ GANHOU!", 350, 415);
+    pincel.fillText("VOCÊ GANHOU!", 350, 415);
 }
 
 var canvas = document.querySelector("#tabuleiro");

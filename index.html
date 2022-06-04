@@ -11,6 +11,9 @@
     <link rel="icon" href="icon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,21 +36,21 @@
         
         <section class="tabuleiro invisivel">
             <canvas id="tabuleiro" width="1200" height="700"></canvas>
+            <input type="text" class="entrada">
             <button class="btn-novo-jogo">Novo jogo</button>
             <button class="btn-desistir">Desistir</button>
-            <input type="text" class="entrada">
         </section>
 
         <section class="adicionar-palavra invisivel">
-            <input type="text" class="add-palavra">
+            <input type="text" class="add-palavra" placeholder="Digite aqui sua palavra...">
+
+            <div class="info">
+                <ul class="mensagens-erro"></ul>
+            </div>
 
             <div class="botoes-adicionar">
                 <button class="btn-salvar">Salvar</button>
                 <button class="btn-voltar">Voltar</button>
-            </div>
-
-            <div class="info">
-                <ul class="mensagens-erro"></ul>
             </div>
         </section>
     </main>
