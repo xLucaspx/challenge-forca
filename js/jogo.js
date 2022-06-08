@@ -32,7 +32,8 @@ function pegaLetra(e) {
 
 function jogar(caracteres) {
     entrada.onkeydown = function(e) {
-        let letra = e.target.value.toUpperCase() || pegaLetra(e).toUpperCase();
+        let letra = pegaLetra(e).toUpperCase() || entrada.value.toUpperCase();
+        entrada.value = "";
 
         if(/[A-Z]/.test(letra)) {
             for(let i = 0; i < usadas.length; i++) {
