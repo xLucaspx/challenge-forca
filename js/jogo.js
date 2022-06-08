@@ -23,7 +23,7 @@ function sorteia(array) {
 //Função para pegar letra pressionada
 
 function pegaLetra(e) {
-    e = e || window.event;
+    e = e || window.event || entrada.onkeydown;
     let letra = e.keyCode || e.which;
     return String.fromCharCode(letra);
 }

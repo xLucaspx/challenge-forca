@@ -225,6 +225,9 @@ and (max-device-width: 650px) {
     footer {
         margin-top: 15rem;
     }
+    .redes a {
+        margin: 0 5px;
+    }
 }
 /*Tablets*/
 @media screen
