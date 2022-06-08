@@ -65,12 +65,22 @@ canvas {
     background-color: transparent;
     border: none;
 }
+.letras-teclado {
+    margin: 1rem 0.5rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 22px;
+
+}
 .entrada {
     display: block;
     width: 0;
     height: 0;
     border: none;
     outline: none;
+}
+.btn-novo-jogo, .btn-desistir {
+    margin-top: 5rem;
 }
 .btn-novo-jogo, .btn-desistir, .btn-salvar, .btn-voltar {
     display: inline;
