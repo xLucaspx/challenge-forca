@@ -33,6 +33,7 @@ function pegaLetra(e) {
 function jogar(caracteres) {
     entrada.onkeydown = function(e) {
         let letra = pegaLetra(e).toUpperCase() || entrada.value.toUpperCase();
+        entrada.value = "";
 
         if(/[A-Z]/.test(letra)) {
             for(let i = 0; i < usadas.length; i++) {
@@ -347,8 +348,6 @@ function jogar(caracteres) {
                 setTimeout(desenhaGanhou, 550);
             }
         }
-        console.log(entrada.value);
-        entrada.value = "";
     }
 }
 
