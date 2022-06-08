@@ -23,7 +23,7 @@ function sorteia(array) {
 //Função para pegar letra pressionada
 
 function pegaLetra(e) {
-    e = e || window.event || entrada.onkeydown;
+    e = e || window.event;
     let letra = e.keyCode || e.which;
     return String.fromCharCode(letra);
 }
@@ -32,7 +32,7 @@ function pegaLetra(e) {
 
 function jogar(caracteres) {
     entrada.onkeydown = function(e) {
-        let letra = pegaLetra(e).toUpperCase();
+        let letra = pegaLetra(e).toUpperCase() || entrada.value.toUpperCase();
 
         if(/[A-Z]/.test(letra)) {
             for(let i = 0; i < usadas.length; i++) {
@@ -347,6 +347,8 @@ function jogar(caracteres) {
                 setTimeout(desenhaGanhou, 550);
             }
         }
+        console.log(entrada.value);
+        entrada.value = "";
     }
 }
 
