@@ -57,6 +57,9 @@ header:hover {
     background-color: #0a3871;
     color: #f3f5fc;
 }
+button {
+    box-shadow: 3px 5px 10px #495057;
+}
 /*Tabuleiro*/
 .tabuleiro {
     text-align: center;
@@ -72,7 +75,7 @@ canvas {
     border-radius: 10px;
     border-width: 1px;
     border-color: #0a3871;
-    box-shadow: 3px 3px #0a3871;
+    box-shadow: 3px 3px 5px #0a3871;
     background-color: #f3f5fc;
     color: #0a3871;
 }
@@ -98,6 +101,9 @@ canvas {
     height: 0;
     border: none;
     outline: none;
+}
+.btn-novo-jogo, .btn-desistir {
+    margin-top: 2rem;
 }
 .btn-novo-jogo, .btn-desistir, .btn-salvar, .btn-voltar {
     display: inline;
@@ -142,7 +148,7 @@ canvas {
 }
 .botoes-adicionar {
     margin-top: 2rem;
-    margin-bottom: 20rem;
+    margin-bottom: 25rem;
 }
 /*Footer*/
 footer {
