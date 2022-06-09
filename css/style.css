@@ -65,6 +65,33 @@ canvas {
     background-color: transparent;
     border: none;
 }
+.letras-teclado, .ativar-teclado, .desativar-teclado {
+    margin: 1rem 0.5rem;
+    height: 4rem;
+    font-size: 22px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #0a3871;
+    box-shadow: 3px 3px #0a3871;
+    background-color: #f3f5fc;
+    color: #0a3871;
+}
+.ativar-teclado, .desativar-teclado {
+    width: 7rem;
+}
+.letras-teclado {
+    width: 4rem;
+}
+.letras-teclado:hover, .ativar-teclado:hover, .desativar-teclado:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.1);
+    background-color: #0a3871;
+    color: #f3f5fc;
+}
+.letras-teclado:active, .ativar-teclado:active, .desativar-teclado:active .clicada {
+    opacity: 75%;
+}
 .entrada {
     display: block;
     width: 0;
@@ -165,6 +192,17 @@ and (max-device-width: 450px) {
     canvas {
         width: 420px;
     }
+    .letras-teclado, .ativar-teclado, .desativar-teclado {
+        margin: 5px 2px;
+        height: 28px;
+        font-size: 16px;
+    }
+    .ativar-teclado, .desativar-teclado {
+        width: 65px;
+    }
+    .letras-teclado {
+        width: 28px;
+    }
     .btn-novo-jogo, .btn-desistir, .btn-salvar, .btn-voltar {
         display: block;
         margin: 1.5rem auto;
@@ -206,6 +244,17 @@ and (max-device-width: 650px) {
     canvas {
         width: 520px;
     }
+    .letras-teclado, .ativar-teclado, .desativar-teclado {
+        margin: 7px 2px;
+        height: 37px;
+        font-size: 20px;
+    }
+    .ativar-teclado, .desativar-teclado {
+        width: 90px;
+    }
+    .letras-teclado {
+        width: 37px;
+    }
     .btn-novo-jogo, .btn-desistir, .btn-salvar, .btn-voltar {
         display: block;
         margin: 1.5rem auto;
@@ -238,6 +287,20 @@ and (max-device-width: 900px) {
     }
     canvas {
         width: 800px;
+    }
+    .letras-teclado, .ativar-teclado, .desativar-teclado {
+        margin: 10px 5px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .ativar-teclado, .desativar-teclado {
+        width: 115px;
+    }
+    .letras-teclado {
+        width: 50px;
+    }
+    .btn-novo-jogo, .btn-desistir {
+        margin-top: 2rem;
     }
     .add-palavra {
         width: 30rem;
