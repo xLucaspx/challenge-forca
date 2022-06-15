@@ -40,3 +40,32 @@ desativarTeclado.onclick = function() {
     desativarTeclado.classList.add("invisivel");
     teclado.classList.add("invisivel");
 }
+
+function limpaTeclado() {
+    letraQ.classList.remove("clicadas");
+    letraW.classList.remove("clicadas");
+    letraE.classList.remove("clicadas");
+    letraR.classList.remove("clicadas");
+    letraT.classList.remove("clicadas");
+    letraY.classList.remove("clicadas");
+    letraU.classList.remove("clicadas");
+    letraI.classList.remove("clicadas");
+    letraO.classList.remove("clicadas");
+    letraP.classList.remove("clicadas");
+    letraA.classList.remove("clicadas");
+    letraS.classList.remove("clicadas");
+    letraD.classList.remove("clicadas");
+    letraF.classList.remove("clicadas");
+    letraG.classList.remove("clicadas");
+    letraH.classList.remove("clicadas");
+    letraJ.classList.remove("clicadas");
+    letraK.classList.remove("clicadas");
+    letraL.classList.remove("clicadas");
+    letraZ.classList.remove("clicadas");
+    letraX.classList.remove("clicadas");
+    letraC.classList.remove("clicadas");
+    letraV.classList.remove("clicadas");
+    letraB.classList.remove("clicadas");
+    letraN.classList.remove("clicadas");
+    letraM.classList.remove("clicadas");
+}

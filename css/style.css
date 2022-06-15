@@ -81,6 +81,7 @@ canvas {
 }
 .ativar-teclado, .desativar-teclado {
     width: 7rem;
+    
 }
 .letras-teclado {
     width: 4rem;
@@ -92,11 +93,16 @@ canvas {
     background-color: #0a3871;
     color: #f3f5fc;
 }
-.letras-teclado:active, .ativar-teclado:active, .desativar-teclado:active .clicada {
+.letras-teclado:active, .ativar-teclado:active, .desativar-teclado:active {
     opacity: 75%;
 }
+.clicadas {
+    background-color: #0a3871;
+    color: #f3f5fc;
+    opacity: 85%;
+}
 .entrada {
-    display: block;
+    display: inline;
     width: 0;
     height: 0;
     border: none;

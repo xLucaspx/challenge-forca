@@ -44,43 +44,43 @@ function validaLetra(letra, caracteres) {
     
     if(caracteres.length == 3 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     if(caracteres.length == 4 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2] && letra != caracteres[3]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     if(caracteres.length == 5 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2]
         && letra != caracteres[3] && letra != caracteres[4]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     if(caracteres.length == 6 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2]
         && letra != caracteres[3] && letra != caracteres[4] && letra != caracteres[5]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     if(caracteres.length == 7 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2]
         && letra != caracteres[3] && letra != caracteres[4] && letra != caracteres[5] && letra != caracteres[6]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     if(caracteres.length == 8 && letra != caracteres[0] && letra != caracteres[1] && letra != caracteres[2] && letra != caracteres[3] 
         && letra != caracteres[4] && letra != caracteres[5] && letra != caracteres[6] && letra != caracteres[7]) {
         usadas.push(letra);
-        pincel.font = "24px Arial";
+        pincel.font = "32px Arial";
         pincel.fillStyle = "black";
-        pincel.fillText(usadas, 525, 575);
+        pincel.fillText(usadas, 525, 585);
     }
     
     let erros = usadas.length;
@@ -353,32 +353,110 @@ function jogar(caracteres) {
             validaLetra(letra, caracteres);
         }
     }
-    letraQ.onclick = function() {validaLetra("Q", caracteres);}
-    letraW.onclick = function() {validaLetra("W", caracteres);}
-    letraE.onclick = function() {validaLetra("E", caracteres);}
-    letraR.onclick = function() {validaLetra("R", caracteres);}
-    letraT.onclick = function() {validaLetra("T", caracteres);}
-    letraY.onclick = function() {validaLetra("Y", caracteres);}
-    letraU.onclick = function() {validaLetra("U", caracteres);}
-    letraI.onclick = function() {validaLetra("I", caracteres);}
-    letraO.onclick = function() {validaLetra("O", caracteres);}
-    letraP.onclick = function() {validaLetra("P", caracteres);}
-    letraA.onclick = function() {validaLetra("A", caracteres);}
-    letraS.onclick = function() {validaLetra("S", caracteres);}
-    letraD.onclick = function() {validaLetra("D", caracteres);}
-    letraF.onclick = function() {validaLetra("F", caracteres);}
-    letraG.onclick = function() {validaLetra("G", caracteres);}
-    letraH.onclick = function() {validaLetra("H", caracteres);}
-    letraJ.onclick = function() {validaLetra("J", caracteres);}
-    letraK.onclick = function() {validaLetra("K", caracteres);}
-    letraL.onclick = function() {validaLetra("L", caracteres);}
-    letraZ.onclick = function() {validaLetra("Z", caracteres);}
-    letraX.onclick = function() {validaLetra("X", caracteres);}
-    letraC.onclick = function() {validaLetra("C", caracteres);}
-    letraV.onclick = function() {validaLetra("V", caracteres);}
-    letraB.onclick = function() {validaLetra("B", caracteres);}
-    letraN.onclick = function() {validaLetra("N", caracteres);}
-    letraM.onclick = function() {validaLetra("M", caracteres);}
+    letraQ.onclick = function() {
+        validaLetra("Q", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraW.onclick = function() {
+        validaLetra("W", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraE.onclick = function() {
+        validaLetra("E", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraR.onclick = function() {
+        validaLetra("R", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraT.onclick = function() {
+        validaLetra("T", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraY.onclick = function() {
+        validaLetra("Y", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraU.onclick = function() {
+        validaLetra("U", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraI.onclick = function() {
+        validaLetra("I", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraO.onclick = function() {
+        validaLetra("O", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraP.onclick = function() {
+        validaLetra("P", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraA.onclick = function() {
+        validaLetra("A", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraS.onclick = function() {
+        validaLetra("S", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraD.onclick = function() {
+        validaLetra("D", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraF.onclick = function() {
+        validaLetra("F", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraG.onclick = function() {
+        validaLetra("G", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraH.onclick = function() {
+        validaLetra("H", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraJ.onclick = function() {
+        validaLetra("J", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraK.onclick = function() {
+        validaLetra("K", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraL.onclick = function() {
+        validaLetra("L", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraZ.onclick = function() {
+        validaLetra("Z", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraX.onclick = function() {
+        validaLetra("X", caracteres);
+        this.classList.add("clicadas");
+    }   
+    letraC.onclick = function() {
+        validaLetra("C", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraV.onclick = function() {
+        validaLetra("V", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraB.onclick = function() {
+        validaLetra("B", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraN.onclick = function() {
+        validaLetra("N", caracteres);
+        this.classList.add("clicadas");
+    }
+    letraM.onclick = function() {
+        validaLetra("M", caracteres);
+        this.classList.add("clicadas");
+    }
 }
 
 const botaoIniciar = document.querySelector(".btn-iniciar");
@@ -396,6 +474,7 @@ botaoIniciar.onclick = function() {
     acertos = [];
     limpaTela();
     mostraTabuleiro();
+    limpaTeclado();
     entrada.value = "";
     desenhaForca();
 
@@ -410,6 +489,7 @@ botaoNovoJogo.onclick = function() {
     usadas = [];
     acertos = [];
     limpaTela();
+    limpaTeclado();
     entrada.value = "";
     desenhaForca();
 
