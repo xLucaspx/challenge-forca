@@ -36,10 +36,12 @@ btnSalvar.addEventListener("click", function(){
     }
 
     mensagensErro.innerHTML = "";
-    palavras.push(novaPalavra);
-    console.log("Sucesso! Palavas disponíveis agora: " + palavras.length);
-    inputAddPalavra.value = "";
-    inputAddPalavra.focus();
+    if(/[a-zA-Z]/.test(novaPalavra)) {
+        palavras.push(novaPalavra);
+        console.log("Sucesso! Palavas disponíveis agora: " + palavras.length);
+        inputAddPalavra.value = "";
+        inputAddPalavra.focus();
+    } else mostraErros([" Caracteres inválidos detectados!"]);
 });
 
 //Função para retornar ao menu inicial
