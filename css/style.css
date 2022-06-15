@@ -100,6 +100,7 @@ canvas {
     background-color: #0a3871;
     color: #f3f5fc;
     opacity: 85%;
+    pointer-events: none;
 }
 .entrada {
     display: inline;
